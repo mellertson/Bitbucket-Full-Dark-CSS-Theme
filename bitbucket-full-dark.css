@@ -7,8 +7,22 @@
 @license      NONE
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document url-prefix("https://bitbucket"), regexp("http[s]*[:][/]+.*[/]bitbucket[/].*") {
-/* Bitbucket AUI Side Panel */
+/* ==UserStyle==
+@name         Bitbucket Full Dark
+@namespace    USO Archive
+@author       Mike Ellertson
+@description  A dark theme for Bitbucket, which compliments my Jira Full Dark theme.
+@version      20190802.03.36
+@license      NONE
+@preprocessor uso
+==/UserStyle== */
+@-moz-document url-prefix("https://bitbucket"), regexp("http[s]*[:][/]+.*[/]bitbucket[/].*"), url-prefix("https://vetthevote.com/bitbucket/*") {
+/********** Global **********/
+/* Global header */
+.bitbucket-theme #content > header {
+	background-color: #202020;
+}
+/* Global Left Side Panel */
 aside.aui-page-panel-sidebar,
 aside.aui-page-panel-sidebar section {
 	background-color: #202020;
@@ -18,6 +32,62 @@ aside.aui-page-panel-sidebar section div.welcome-mat p {
 	background-color: #303030;
 	color: #deebff;
 }
+/* global footer */
+body #footer-logo {
+	background: #202020;
+}
+
+
+/********** Project **********/
+/* Project list items */
+.paged-table tr td:first-child,
+.paged-table tr.focused td {
+	background-color: #303030;
+}
+
+
+/********** Repo **********/
+/* Repo header */
+.paged-table-filter-input {
+	background: #303030;
+}
+/* Repo header -> filter text */
+.paged-table-filter-input::placeholder {
+	color: #999999;
+}
+/* Repo header */
+.filterable-entity-table .paged-table-filter {
+	background-color: #202020;
+}
+/* Repo README.md files */
+.markup code {
+	background-color: #083376;
+}
+/* Repo Labels field */
+.empty-labels-wrapper .empty-labels-input {
+	background-color: #404040;
+}
+.empty-labels-wrapper .empty-labels-input::placeholder {
+	color: #8F8F8F;
+}
+
+
+/********** Markdown **********/
+/* Markdown command options */
+.cm-s-stash-default .cm-attribute,
+.cm-s-stash-default .cm-builtin {
+	color: #32fe3b;
+}
+/* Markdown comments */
+.cm-s-stash-default .cm-comment {
+	color: #4FAA47;
+	font-weight: bold;
+}
+/* Markdown bash command */
+.markup-content,
+.cm-s-stash-default .cm-builtin {
+	color: #FAFBFC;
+}
 
 /* Jira side panel background */
 #content > div.aui-page-panel > div > div {
@@ -26,12 +96,12 @@ aside.aui-page-panel-sidebar section div.welcome-mat p {
 
 /* Jira System Dashboard Background */
 #dashboard-content {
-	background-color: #303030!important;
+	background-color: #303030;
 }
 
 /* Jira System Dashboard Header Background */
 #dashboard-content > div.aui-page-header {
-	background-color: #303030!important;
+	background-color: #303030;
 	border-color: #0747A659;
 	border-style: solid;
 	border-width: 3px;
@@ -121,21 +191,21 @@ div > div.ghx-subtask-group > div.js-detailview.ghx-issue.js-issue.ghx-has-avata
 .ghx-end,
 .ghx-corner,
 .aui-badge {
-	background-color: rgba(64, 64, 64, 0.0) !important;
+	background-color: rgba(64, 64, 64, 0.0);
 }
 .ghx-end,
 .aui-badge {
-	box-shadow: -4px 0 3px rgba(32, 32, 32, 0.0) !important;
+	box-shadow: -4px 0 3px rgba(32, 32, 32, 0.0);
 }
 .ghx-corner {
-	box-shadow: -4px 0 3px rgba(32, 32, 32, 0.75) !important;
+	box-shadow: -4px 0 3px rgba(32, 32, 32, 0.75);
 }
 .gadget .ghx-issue:hover,
 .gadget .ghx-issue.ghx-selected {
 	background: #202020;
 }
 #ghx-chart-view > canvas.base {
-	filter: invert(35%)!important;
+	filter: invert(35%);
 }
 
 /* Light Text Color #999 */
