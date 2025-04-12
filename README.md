@@ -10,7 +10,8 @@ Enjoy!
 
 # Release Notes
 
-Version 2019.08.02 - A dark theme for Bitbucket, which compliments my Jira Full Dark theme
+* **Version 2025.04.12** - Corrected background and text colors of repos and markdown files.
+* **Version 2019.08.02** - A dark theme for Bitbucket, which compliments my Jira Full Dark theme
 
 [1]: https://uso.kkx.one/style/174060
 [2]: https://userstyles.org/help/stylish
